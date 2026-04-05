@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="File a New Claim">
+        <lightning-input label="Policy Number" value={policyNumber} onchange={handleChange}></lightning-input>
+        <lightning-input type="date" label="Incident Date" value={incidentDate} onchange={handleChange}></lightning-input>
+        <lightning-input label="Incident Location" value={location} onchange={handleChange}></lightning-input>
+
+        <lightning-file-upload
+            label="Upload Damage Photos"
+            name="damagePhotos"
+            record-id={recordId}
+            onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+
+        <lightning-button label="Submit Claim" onclick={submitClaim} class="slds-m-top_medium"></lightning-button>
+
+        <template if:true={statusMessage}>
+            <p class="slds-text-color_success">{statusMessage}</p>
+        </template>
+    </lightning-card>
+</template>

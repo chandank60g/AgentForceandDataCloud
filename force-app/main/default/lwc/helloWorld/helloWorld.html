@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            <!-- Display Contacts List -->
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <div key={contact.Id} class="slds-box slds-m-bottom_small">
+                        <lightning-input label="First Name" value={contact.FirstName} onchange={handleInputChange} data-id={contact.Id} data-field="FirstName"></lightning-input>
+                        <lightning-input label="Last Name" value={contact.LastName} onchange={handleInputChange} data-id={contact.Id} data-field="LastName"></lightning-input>
+                        <lightning-input label="Email" value={contact.Email} onchange={handleInputChange} data-id={contact.Id} data-field="Email"></lightning-input>
+                        <lightning-input label="Phone" value={contact.Phone} onchange={handleInputChange} data-id={contact.Id} data-field="Phone"></lightning-input>
+                        <lightning-button label="Save" variant="brand" onclick={saveContact} data-id={contact.Id}></lightning-button>
+                    </div>
+                </template>
+            </template>
+            <!-- Error Message -->
+            <template if:true={error}>
+                <div class="slds-text-color_error slds-m-top_medium">
+                    {error}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

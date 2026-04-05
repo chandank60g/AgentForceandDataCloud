@@ -1,0 +1,30 @@
+<template>
+    
+    <lightning-card title="Employee Details" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+
+            
+
+               
+              <!-- Employee details in big header -->
+                
+                <h2>Employee Details </h2>
+                <p>Name : {name}</p>
+                <p>Salary : {salary}</p>
+                <p>Age : {age}</p>
+                <p>Gender : {gender}</p>
+
+
+            <p>Employee Input </p>
+            
+                <lightning-input type="text" label="name" name = "name" value={name} onchange={handleNameChange}></lightning-input>
+                <lightning-input type="number" label="salary" name = "salary" value={salary} onchange={handleNameChange}></lightning-input>
+
+                <lightning-input type="number" label="age" name = "age" value={age} onchange={handleNameChange}></lightning-input>
+                <lightning-input type="text" label="gender" name = "gender" value={gender} onchange={handleNameChange}></lightning-input>
+
+        </div>
+    </lightning-card>
+
+
+</template>

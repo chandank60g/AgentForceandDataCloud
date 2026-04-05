@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Employee Details" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <h2>Employee Details</h2>
+            <p>Name: {name}</p>
+            <p>Salary: {salary}</p>
+            <p>Age: {age}</p>
+            <p>Gender: {gender}</p>
+
+            <c-employee-input oninputchange={handleInputChange}></c-employee-input>
+            <lightning-button label="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

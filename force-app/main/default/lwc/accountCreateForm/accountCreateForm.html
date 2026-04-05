@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Create Account" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Account Name" data-id="Name" value={accountData.Name} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Phone" data-id="Phone" value={accountData.Phone} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Industry" data-id="Industry" value={accountData.Industry} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Billing Street" data-id="BillingStreet" value={accountData.BillingStreet} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Billing City" data-id="BillingCity" value={accountData.BillingCity} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Billing State" data-id="BillingState" value={accountData.BillingState} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Billing Postal Code" data-id="BillingPostalCode" value={accountData.BillingPostalCode} onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Billing Country" data-id="BillingCountry" value={accountData.BillingCountry} onchange={handleInputChange}></lightning-input>
+            <lightning-button variant="brand" label="Create Account" onclick={handleCreateAccount}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

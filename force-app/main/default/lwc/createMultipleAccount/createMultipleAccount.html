@@ -1,0 +1,57 @@
+<template>
+    <lightning-card title="Multi Account Creator">
+        <div class="slds-p-around_medium">
+            <!-- Account Form Container -->
+            <div class="slds-m-bottom_medium">
+                <lightning-input 
+                    label="Account Name" 
+                    name="Name" 
+                    value={accountData.Name} 
+                    onchange={handleChange}>
+                </lightning-input>
+
+                <lightning-input 
+                    label="Phone" 
+                    name="Phone" 
+                    value={accountData.Phone} 
+                    onchange={handleChange}>
+                </lightning-input>
+
+                <lightning-input 
+                    label="Industry" 
+                    name="Industry" 
+                    value={accountData.Industry} 
+                    onchange={handleChange}>
+                </lightning-input>
+            </div>
+
+            <!-- Button with space above it and centered -->
+            <div class="slds-m-top_medium slds-text-align_center">
+                <lightning-button 
+                    label={buttonLabel} 
+                    onclick={handleAddAccount} 
+                    class="slds-m-top_small">
+                </lightning-button>
+            </div>
+        </div>
+
+        <!-- Table to display added accounts -->
+        <template if:true={accountList}>
+            <lightning-datatable 
+                key-field="id" 
+                data={accountList} 
+                columns={columns} 
+                onrowaction={handleRowAction}
+                class="slds-m-around_medium">
+            </lightning-datatable>
+        </template>
+
+        <div class="slds-p-around_medium">
+            <lightning-button 
+                label="Save All Accounts" 
+                onclick={handleSaveAll} 
+                variant="brand">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

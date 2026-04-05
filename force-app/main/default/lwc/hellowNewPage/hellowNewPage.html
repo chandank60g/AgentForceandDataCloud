@@ -1,0 +1,11 @@
+<template>
+<div class="slds-grid slds-grid_vertical-align-left slds-grid_align-left slds-height_1000vh">
+        <lightning-card title="Hello World">
+            <div class="slds-box slds-p-around_large">
+                <lightning-input class="slds-text-heading_medium" label="First Name" value={firstName} onchange={handleFirstNameChange}></lightning-input>
+                <lightning-input class="slds-text-heading_medium" label="Last Name" value={lastName} onchange={handleLastNameChange}></lightning-input>
+                <p class="slds-m-bottom--xx-small slds-text-heading_medium">{fullName}</p>
+            </div>
+        </lightning-card>
+    </div>
+</template>
